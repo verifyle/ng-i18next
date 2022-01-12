@@ -1,6 +1,6 @@
 /*!
- * ng-i18next - Version 1.0.7 - 2019-11-26
- * Copyright (c) 2019 i18next authors
+ * ng-i18next - Version 1.0.7 - 2022-01-11
+ * Copyright (c) 2022 i18next authors
  *
  * AngularJS provider, filter and directive for i18next (i18next by Jan Mühlemann)
  *
@@ -272,6 +272,7 @@ var I18nTranslateService = /** @class */ (function () {
             this.options.lng = lng;
             this.i18n.changeLanguage(lng, function (err, t) {
                 _this.$rootScope.$broadcast('i18nextLanguageChange', _this.i18n.language);
+                _this.translations = {};
             });
         }
     };

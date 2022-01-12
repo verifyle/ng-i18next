@@ -50,6 +50,7 @@ export class I18nTranslateService implements Ii18nTranslateService {
 			this.options.lng = lng;
 			this.i18n.changeLanguage(lng, (err, t) => {
 				this.$rootScope.$broadcast('i18nextLanguageChange', this.i18n.language);
+				this.translations = {};
 			});
 		}
 	}
